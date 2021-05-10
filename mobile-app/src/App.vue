@@ -11,3 +11,9 @@ export default {
   components: {TheMenu}
 }
 </script>
+<style lang="scss">
+body{
+  background-color: #CDE7FD;
+}
+</style>
+
