@@ -5,6 +5,7 @@
         <div class="img">
           <q-img alt="SignUp" src="Sign Up.png" style="height: 50%; width:50%;"/>
         </div>
+        <h4 class="word">Sign Up</h4>
         <q-input outlined label="E-mail" type="email" style="width: 30rem"/>
         <q-input outlined type="password" label="Password" style="width: 30rem"/>
       </q-form>
@@ -58,5 +59,10 @@ export default {
   box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.word{
+  font-weight: bold;
+  color: $red;
+  margin: 0;
 }
 </style>
