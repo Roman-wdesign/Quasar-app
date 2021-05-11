@@ -1,20 +1,19 @@
 <template>
   <div class="main">
     <div class="imgDesktop">
-      <q-img alt="Ellipse19" src="/icons/Ellipse-19.png" style="height: 25%; width:25%;float: left;
-                  position: relative;z-index: -1;"/>
-      <div class="settings">
-        <div class="row">
-          <div class="set"></div>
-          <div class="user"></div>
-        </div>
+      <q-img alt="Ellipse19" src="/icons/Ellipse-19.png" style="height: 25%;
+      width:25%;float: left; margin-top: -150px; position: relative;z-index: -1;"/>
 
-      </div>
-
+      <q-img alt="Ellipse18" src="/icons/Ellipse-18.png" style="height: 25%;
+      width:25%;float: right;margin-top: -150px;    position: relative;z-index: -1;"/>
     </div>
 
     <div class="content">
       <h2>MelodyCam</h2>
+      <div class="set">
+        <a href="#" class="user"></a>
+        <a href="#" class="settings"></a>
+      </div>
     </div>
   </div>
 </template>
@@ -26,14 +25,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.imgDesktop {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
+
 
 .content {
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   z-index: 5;
 }
 
@@ -43,38 +41,33 @@ h2 {
   font-weight: bold;
   color: $red;
 }
-
-
-.settings {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-  height: 250px;
-  background-position: center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-image: url($imgPath + "Ellipse-18.png");
-}
-.row{
+.set{
   display: flex;
   flex-direction: row;
 }
-.set {
+.user{
+  margin-right: 0.5rem;
   width: 42px;
   height: 42px;
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-image: url($imgPath + "settings.png");
+  background-image:url($imgPath  + "settings.png");
+  &:hover{
+    opacity: 50%;
+  }
+}
+.settings{
+  margin-left: 0.5rem;
+  width: 42px;
+  height: 42px;
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image:url($imgPath  + "user.png");
+  &:hover{
+    opacity: 50%;
+  }
 }
 
-.user {
-  width: 42px;
-  height: 42px;
-  background-position: center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-image: url($imgPath + "user.png");
-}
 </style>

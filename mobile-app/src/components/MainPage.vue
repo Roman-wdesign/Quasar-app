@@ -7,7 +7,7 @@
           left:0;
          z-index: 1"/>
       <q-img alt="Main" src="Team.png"
-             style="right: 50px; height: 35%; width: 35%;
+             style="right: 50px;height: 35%; width: 35%;
              position: relative;
              float: right;
              z-index: 1"/>
