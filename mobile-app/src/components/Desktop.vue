@@ -2,10 +2,10 @@
   <div class="main">
     <div class="imgDesktop">
       <q-img alt="Ellipse19" src="/icons/Ellipse-19.png" style="height: 25%;
-      width:25%;float: left; margin-top: -150px; position: relative;z-index: -1;"/>
+      width:25%;float: left;   margin-right: -200px; position: relative;z-index: -1;"/>
 
       <q-img alt="Ellipse18" src="/icons/Ellipse-18.png" style="height: 25%;
-      width:25%;float: right;margin-top: -150px;    position: relative;z-index: -1;"/>
+      width:25%;float: right; margin-left: -200px;    position: relative;z-index: -1;"/>
     </div>
 
     <div class="content">
@@ -15,59 +15,210 @@
         <a href="#" class="settings"></a>
       </div>
     </div>
+
+
+    <div class="chose">
+      <div class="gender">
+        <q-tabs no-shadow>
+          <q-tab class="tabs" no-shadow name="female" label="Female"/>
+          <q-tab class="tabs" no-shadow name="male" label="Male"/>
+          <q-tab class="tabs" no-shadow name="couple" label="Couple"/>
+        </q-tabs>
+      </div>
+    </div>
+
+    <div class="chatting">
+      <div class="video">
+        <div class="search">
+          <q-btn class="searching">
+            <div class="poly"></div>
+            Searching for female
+          </q-btn>
+        </div>
+        <div class="search">
+          <a href="#" class="mic"></a>
+          <a href="#" class="cam"></a>
+        </div>
+      </div>
+      <div class="chat  .shadow-6">
+        <div class="q-pa-md row justify-center">
+          <div style="width: 100%; width: 400px">
+            <q-chat-message
+              name="me"
+              avatar="https://cdn.quasar.dev/img/avatar1.jpg"
+              :text="['hey, how are you?']"
+              sent
+              bg-color="cyan-3"
+            />
+            <q-chat-message
+              name="Jane"
+              avatar="https://cdn.quasar.dev/img/avatar2.jpg"
+              :text="['doing fine, how r you?']"
+              bg-color="light-blue-13"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+
 export default {
   name: "Desktop",
+
 }
 </script>
 
 <style lang="scss" scoped>
 
-
 .content {
+  margin-top: -110px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   z-index: 5;
 }
 
 h2 {
+
   z-index: 5;
   font-family: Montserrat-ExtraBold;
   font-weight: bold;
   color: $red;
 }
-.set{
+
+.set {
   display: flex;
   flex-direction: row;
 }
-.user{
+
+.user {
   margin-right: 0.5rem;
   width: 42px;
   height: 42px;
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-image:url($imgPath  + "settings.png");
-  &:hover{
+  background-image: url($imgPath  + "settings.png");
+
+  &:hover {
     opacity: 50%;
   }
 }
-.settings{
+
+.settings {
   margin-left: 0.5rem;
   width: 42px;
   height: 42px;
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-image:url($imgPath  + "user.png");
-  &:hover{
+  background-image: url($imgPath  + "user.png");
+
+  &:hover {
     opacity: 50%;
   }
+}
+
+.chose {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.tabs {
+  box-shadow: none;
+  font-family: Montserrat-Regular;
+  font-weight: normal;
+
+  &:hover {
+    box-shadow: none;
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-image: url($imgPath  + "tab-hover.png");
+    border: none;
+
+  }
+
+}
+
+.chatting {
+  padding: 0.5rem 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  width: 611px;
+  height: 280px;
+  background-color: #C4C4C4;
+  margin: 0.5rem 0.5rem 0 0;
+  border: solid #ffffff 2px;
+}
+
+.searching {
+border-radius: 3rem;
+  background-color: #CDE7FD;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: none;
+}
+.poly{
+  margin: auto;
+  margin: 0 0.5rem 0 0;
+  width: 25px;
+  height: 25px;
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image: url($imgPath  + "Polygon 1.png");
+}
+
+.mic {
+  margin: 0 0 0.5rem 0;
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image: url($imgPath  + "Microphone.png");
+
+  &:hover {
+    opacity: 50%;
+  }
+
+}
+
+.cam {
+  margin: 0.5rem 0 0 0;
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image: url($imgPath  + "Camera.png");
+
+  &:hover {
+    opacity: 50%;
+  }
+}
+
+.chat {
+
+  border-radius: 2rem;
+  padding: 0.5rem;
+  background-color: #ffffff;
 }
 
 </style>
