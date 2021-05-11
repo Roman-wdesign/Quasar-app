@@ -12,6 +12,16 @@ const routes = [
     component: () => import('components/TheSignUp'),
 
   },
+  {
+    path: '/login',
+    component: () => import('components/TheLogin'),
+
+  },
+  {
+    path: '/desktop',
+    component: () => import('components/Desktop'),
+
+  },
 
   // Always leave this as last one,
   // but you can also remove it

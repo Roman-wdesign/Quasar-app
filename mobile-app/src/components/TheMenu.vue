@@ -12,6 +12,14 @@
               <q-item-section>Sign Up</q-item-section>
             </q-item>
 
+            <q-item clickable to="/login" v-close-popup>
+              <q-item-section>Login</q-item-section>
+            </q-item>
+
+            <q-item clickable to="/desktop" v-close-popup>
+              <q-item-section>Desktop</q-item-section>
+            </q-item>
+
           </q-list>
         </q-menu>
       </q-btn>
