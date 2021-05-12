@@ -35,15 +35,17 @@
             Searching for female
           </q-btn>
         </div>
-        <div class="search">
+        <div class="search2">
           <a href="#" class="mic"></a>
           <a href="#" class="cam"></a>
         </div>
       </div>
       <div class="chat  .shadow-6">
-        <div class="q-pa-md row justify-center">
+        <h4 style="text-align: center;margin-top: 5px;">Chat</h4>
+        <div class="q row justify-center">
           <div style="width: 100%; width: 400px">
             <q-chat-message
+              style="  padding: 0.5rem;"
               name="me"
               avatar="https://cdn.quasar.dev/img/avatar1.jpg"
               :text="['hey, how are you?']"
@@ -51,16 +53,24 @@
               bg-color="cyan-3"
             />
             <q-chat-message
+              style="  padding: 0.5rem;"
               name="Jane"
               avatar="https://cdn.quasar.dev/img/avatar2.jpg"
               :text="['doing fine, how r you?']"
               bg-color="light-blue-13"
             />
           </div>
+          <div class="area">
+            <q-input
+              borderless
+              autogrow
+              type="textarea"
+            />
+          </div>
+        </div>
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -72,6 +82,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.area {
+  margin: 0;
+  border-radius: 2rem;
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  //max-height: 4.5rem;
+  //height: 100%;
+  width: 100%;
+  background-color: #E1F0FC;
+}
+
+
+
 
 .content {
   margin-top: -110px;
@@ -87,6 +111,12 @@ h2 {
   z-index: 5;
   font-family: Montserrat-ExtraBold;
   font-weight: bold;
+  color: $red;
+}
+
+h4 {
+  font-family: Montserrat-Regular;
+  font-weight: 700;
   color: $red;
 }
 
@@ -163,18 +193,32 @@ h2 {
   width: 611px;
   height: 280px;
   background-color: #C4C4C4;
-  margin: 0.5rem 0.5rem 0 0;
+  margin: 0 0.5rem 0 0;
+  border: solid #ffffff 2px;
+}
+.search2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  width: 611px;
+  height: 280px;
+  background-color: #C4C4C4;
+  margin: 0.5rem 0 0 0;
   border: solid #ffffff 2px;
 }
 
 .searching {
-border-radius: 3rem;
+  border-radius: 3rem;
   background-color: #CDE7FD;
   font-size: 1.3rem;
   font-weight: 400;
   text-transform: none;
 }
-.poly{
+
+.poly {
   margin: auto;
   margin: 0 0.5rem 0 0;
   width: 25px;
@@ -215,9 +259,8 @@ border-radius: 3rem;
 }
 
 .chat {
-
+  position: relative;
   border-radius: 2rem;
-  padding: 0.5rem;
   background-color: #ffffff;
 }
 
