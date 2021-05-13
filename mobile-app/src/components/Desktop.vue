@@ -67,6 +67,11 @@
               autogrow
               type="textarea"
             />
+            <div class="area-icon">
+              <q-btn round>
+                <q-icon name="img:icons/emoji.png" />
+              </q-btn>
+            </div>
           </div>
         </div>
       </div>
@@ -93,22 +98,13 @@ export default {
   width: 100%;
   background-color: #E1F0FC;
 }
+.area-icon{
+
+}
+
 label{
   position: relative;
-  padding-left: 10px;
-}
-label:before{
-  width: 100%;
-  height: 100%;
-  content: "";
-  position: absolute;
-  righth: 0;
-  top: 0;
-  bottom: 0;
-
-  background-repeat: no-repeat;
-  background-image: url($imgPath  + "settings.png");
-
+  padding-left: 1rem;
 }
 
 .content {
