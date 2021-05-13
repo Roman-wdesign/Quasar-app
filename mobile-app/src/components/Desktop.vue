@@ -61,15 +61,20 @@
             />
           </div>
           <div class="area">
-            <q-input
-              label="Write to your new friend"
-              borderless
-              autogrow
-              type="textarea"
-            />
+            <div class="area-input">
+              <q-input
+                placeholder="Write to your new friend"
+                borderless
+                autogrow
+
+                type="textarea"/>
+            </div>
             <div class="area-icon">
-              <q-btn round>
-                <q-icon name="img:icons/emoji.png" />
+              <q-btn class="btn-icon"   size="12px" flat round :ripple="false" disable >
+                <q-icon name="img:icons/emoji.png"/>
+              </q-btn>
+              <q-btn class="btn-icon"  size="12px" flat round :ripple="false" disable  >
+                <q-icon name="img:icons/send.png"/>
               </q-btn>
             </div>
           </div>
@@ -82,13 +87,20 @@
 <script>
 
 export default {
+
   name: "Desktop",
 
 }
 </script>
 
 <style lang="scss" scoped>
+
+
 .area {
+  padding: 0 1rem;
+  display: flex;
+
+  justify-content: center;
   margin: 0;
   border-radius: 2rem;
   position: absolute;
@@ -98,13 +110,20 @@ export default {
   width: 100%;
   background-color: #E1F0FC;
 }
-.area-icon{
+
+.area-icon {
+  display: flex;
+  flex-direction: row;
 
 }
 
-label{
+.area-input {
+  width: 100%;
+}
+
+label {
   position: relative;
-  padding-left: 1rem;
+
 }
 
 .content {
