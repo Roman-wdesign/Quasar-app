@@ -62,15 +62,16 @@
           </div>
           <div class="area">
             <q-input
+              label="Write to your new friend"
               borderless
               autogrow
               type="textarea"
             />
           </div>
         </div>
-        </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -88,14 +89,27 @@ export default {
   position: absolute;
   z-index: 5;
   bottom: 0;
-  //max-height: 4.5rem;
   //height: 100%;
   width: 100%;
   background-color: #E1F0FC;
 }
+label{
+  position: relative;
+  padding-left: 10px;
+}
+label:before{
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  righth: 0;
+  top: 0;
+  bottom: 0;
 
+  background-repeat: no-repeat;
+  background-image: url($imgPath  + "settings.png");
 
-
+}
 
 .content {
   margin-top: -110px;
@@ -196,7 +210,8 @@ h4 {
   margin: 0 0.5rem 0 0;
   border: solid #ffffff 2px;
 }
-.search2{
+
+.search2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
