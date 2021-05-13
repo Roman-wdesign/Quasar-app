@@ -30,10 +30,34 @@
     <div class="chatting">
       <div class="video">
         <div class="search">
-          <q-btn class="searching">
+
+          <q-btn class="searching" @click="alert=true">
             <div class="poly"></div>
             Searching for female
           </q-btn>
+
+          <q-dialog v-model="alert">
+            <q-card>
+              <q-card-section>
+                <div class="text-h6">Alert</div>
+              </q-card-section>
+
+              <q-card-section class="q-pt-none" style="text-align: center">
+                We have updating our filtering system (Female\Male) and you can now instanly find people according to
+                your settings.
+              </q-card-section>
+
+              <q-card-actions v-close-popup align="center">
+                <button-main>
+                  <template>
+                    <q-btn class="signup" label="Ok, thank you"></q-btn>
+                  </template>
+                </button-main>
+              </q-card-actions>
+
+            </q-card>
+          </q-dialog>
+
         </div>
         <div class="search2">
           <a href="#" class="mic"></a>
@@ -70,10 +94,10 @@
                 type="textarea"/>
             </div>
             <div class="area-icon">
-              <q-btn class="btn-icon"   size="12px" flat round :ripple="false" disable >
+              <q-btn class="btn-icon" size="12px" flat round :ripple="false" disable>
                 <q-icon name="img:icons/emoji.png"/>
               </q-btn>
-              <q-btn class="btn-icon"  size="12px" flat round :ripple="false" disable  >
+              <q-btn class="btn-icon" size="12px" flat round :ripple="false" disable>
                 <q-icon name="img:icons/send.png"/>
               </q-btn>
             </div>
@@ -85,9 +109,15 @@
 </template>
 
 <script>
+import ButtonMain from "components/ButtonMain";
 
 export default {
-
+  components: {ButtonMain},
+  data() {
+    return {
+      alert: false,
+    }
+  },
   name: "Desktop",
 
 }

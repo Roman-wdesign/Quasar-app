@@ -10,6 +10,7 @@ const ESLintPlugin = require('eslint-webpack-plugin')
 
 module.exports = function (/* ctx */) {
   return {
+
     // https://v1.quasar.dev/quasar-cli/supporting-ts
     supportTS: false,
 
@@ -20,7 +21,7 @@ module.exports = function (/* ctx */) {
     // --> boot files are part of "main.js"
     // https://v1.quasar.dev/quasar-cli/boot-files
     boot: [
-      
+
     ],
 
     // https://v1.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
@@ -96,7 +97,9 @@ module.exports = function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: [
+        'Dialog'
+      ]
     },
 
     // animations: 'all', // --- includes all animations
