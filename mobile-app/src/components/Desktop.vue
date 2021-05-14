@@ -84,7 +84,7 @@
 
     <div class="chose">
       <div class="gender">
-        <q-tabs no-shadow>
+        <q-tabs no-shadow active-bg-color="">
           <q-tab class="tabs" no-shadow name="female" label="Female"/>
           <q-tab class="tabs" no-shadow name="male" label="Male"/>
           <q-tab class="tabs" no-shadow name="couple" label="Couple"/>
@@ -163,8 +163,9 @@
           <div class="area">
             <div class="area-input" >
               <q-input
-
-                bg-color="dark-page"
+                dark="true"
+                :input-style="{ color: '#000000' }"
+                clearable
                 placeholder="Write to your new friend"
                 borderless
                 autogrow
