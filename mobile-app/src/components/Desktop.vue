@@ -20,7 +20,14 @@
             <h4 class="word">Settings</h4>
             <div class="q-pa-md"
                  style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-              <q-btn-dropdown style="box-shadow: unset;  text-transform: none; color: #1D1D1D;opacity: 50%;" label="Select Country">
+              <q-btn-dropdown
+                flat
+                style="box-shadow: unset;
+                text-transform: none;
+                color: #1D1D1D;
+                opacity: 50%;"
+
+                label="Select Country">
                 <q-list>
                   <q-item clickable v-close-popup @click="onItemClick">
                     <q-item-section>
@@ -34,7 +41,7 @@
                   </q-item>
                 </q-list>
               </q-btn-dropdown>
-              <q-btn-dropdown style="box-shadow: unset;  text-transform: none; color: #1D1D1D;opacity: 50%;" label="Select  Language">
+              <q-btn-dropdown flat style="box-shadow: unset;  text-transform: none; color: #1D1D1D;opacity: 50%;" label="Select  Language">
                 <q-list>
                   <q-item clickable v-close-popup @click="onItemClick">
                     <q-item-section>
@@ -110,7 +117,7 @@
                 <h4 class="word">Update</h4>
               </q-card-section>
               <q-card-section class="q-pt-none"
-                              style="text-align: center; font-family: Montserrat-Regular; font-size: 1.3rem;">
+                              style="text-align: center; font-family:' Montserrat-Regular'; font-size: 1.3rem;">
                 We have updating our filtering <br> system (Female\Male) and you can <br> now instanly find people
                 according <br> to
                 your settings.
@@ -270,13 +277,13 @@ label {
 h2 {
 
   z-index: 5;
-  font-family: Montserrat-ExtraBold;
+  font-family: 'Montserrat-ExtraBold';
   font-weight: bold;
   color: $red;
 }
 
 h4 {
-  font-family: Montserrat-ExtraBold;
+  font-family: 'Montserrat-ExtraBold';
   font-weight: bold;
   color: $red;
 }
