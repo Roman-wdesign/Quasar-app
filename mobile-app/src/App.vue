@@ -12,6 +12,9 @@ export default {
 }
 </script>
 <style lang="scss">
+.body--dark {
+  background-color: $dark-page;
+}
 body{
   background-color: #CDE7FD;
 }

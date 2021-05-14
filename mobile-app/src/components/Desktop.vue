@@ -11,15 +11,16 @@
     <div class="content">
       <h2>MelodyCam</h2>
       <div class="set">
-        <a href="#" class="settings"  @click="settings=true"></a>
+        <a href="#" class="settings" @click="settings=true"></a>
         <a href="#" class="user"></a>
       </div>
-      <q-dialog v-model="settings" >
+      <q-dialog v-model="settings">
         <q-card class="settings-card">
           <q-card-section style="padding: 0">
             <h4 class="word">Settings</h4>
-            <div class="q-pa-md" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-              <q-btn-dropdown style="box-shadow: unset; opacity: 50%; text-transform: none;" label="Select Country"  >
+            <div class="q-pa-md"
+                 style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+              <q-btn-dropdown style="box-shadow: unset;  text-transform: none; color: #1D1D1D;opacity: 50%;" label="Select Country">
                 <q-list>
                   <q-item clickable v-close-popup @click="onItemClick">
                     <q-item-section>
@@ -33,7 +34,7 @@
                   </q-item>
                 </q-list>
               </q-btn-dropdown>
-              <q-btn-dropdown style="box-shadow: unset; opacity: 50%; text-transform: none;" label="Select  Language"  >
+              <q-btn-dropdown style="box-shadow: unset;  text-transform: none; color: #1D1D1D;opacity: 50%;" label="Select  Language">
                 <q-list>
                   <q-item clickable v-close-popup @click="onItemClick">
                     <q-item-section>
@@ -52,21 +53,22 @@
                   </q-item>
                 </q-list>
               </q-btn-dropdown>
-              <q-btn-dropdown style="box-shadow: unset; opacity: 50%; text-transform: none;" label="Enable Dark Theme"  >
-                <q-list>
-                  <q-item clickable v-close-popup @click="onItemClick">
-                    <q-item-section>
-                      <q-item-label>Russia</q-item-label>
-                    </q-item-section>
-                  </q-item>
-                  <q-item clickable v-close-popup @click="onItemClick">
-                    <q-item-section>
-                      <q-item-label>Canada</q-item-label>
-                    </q-item-section>
-                  </q-item>
-                </q-list>
-              </q-btn-dropdown>
+              <div class="toggle"  style="box-shadow: unset;  text-transform: none;">
+                <q-toggle
+                  style="color: #1D1D1D; opacity: 50%;"
+                  keep-color
+                  :label="EnableDarkTheme"
+                  color="pink"
+                  @input="$q.dark.toggle"
+                  false-value="Enable Dark Theme"
+                  true-value = "Disable Dark Theme"
+                  v-model="EnableDarkTheme"
+                />
+              </div>
+
+              <a href="#" style="text-decoration: none; color: black;  opacity: 50%; text-transform: none;">Help</a>
             </div>
+
           </q-card-section>
         </q-card>
       </q-dialog>
@@ -93,7 +95,8 @@
           </q-btn>
 
           <q-dialog v-model="alert">
-            <q-card style="padding: 2rem 0 5rem 0;border-radius: 2rem; max-height: 700px; width: 100%; display: flex;flex-direction: column">
+            <q-card
+              style="padding: 2rem 0 5rem 0;border-radius: 2rem; max-height: 700px; width: 100%; display: flex;flex-direction: column">
               <q-icon v-close-popup
                       style="padding: 0.5rem;  align-self: flex-end;"
                       size="3.5rem">
@@ -135,7 +138,7 @@
         <div class="q row justify-center">
           <div style="width: 100%; width: 400px">
             <q-chat-message
-              style="  padding: 0.5rem;"
+              style="  padding: 0.5rem;color: #1D1D1D"
               name="me"
               avatar="https://cdn.quasar.dev/img/avatar1.jpg"
               :text="['hey, how are you?']"
@@ -143,7 +146,7 @@
               bg-color="cyan-3"
             />
             <q-chat-message
-              style="  padding: 0.5rem;"
+              style="  padding: 0.5rem;color: #1D1D1D"
               name="Jane"
               avatar="https://cdn.quasar.dev/img/avatar2.jpg"
               :text="['doing fine, how r you?']"
@@ -151,12 +154,13 @@
             />
           </div>
           <div class="area">
-            <div class="area-input">
+            <div class="area-input" >
               <q-input
+
+                bg-color="dark-page"
                 placeholder="Write to your new friend"
                 borderless
                 autogrow
-
                 type="textarea"/>
             </div>
             <div class="area-icon">
@@ -177,31 +181,43 @@
 <script>
 import ButtonMain from "components/ButtonMain";
 
+
 export default {
   components: {ButtonMain},
   data() {
     return {
       alert: false,
       settings: false,
-      onItemClick () {
-        // console.log('Clicked on an Item')
+      EnableDarkTheme: 'Enable Dark Theme',
+
+      onItemClick() {
+        console.log('Clicked on an Item')
       }
     }
   },
+  computed: {},
   name: "Desktop",
 
 }
 </script>
 
 <style lang="scss" scoped>
+.body--dark {
+  background: $dark-page;
+}
 
-.settings-card{
+.body--light {
+  background: #ffffff;
+}
+
+.settings-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: inherit;
-  box-shadow: none;right: 0;
+  box-shadow: none;
+  right: 0;
   width: 100vw;
   height: 100vh;
   background-position: center;
@@ -233,6 +249,7 @@ export default {
 }
 
 .area-input {
+
   width: 100%;
 }
 
