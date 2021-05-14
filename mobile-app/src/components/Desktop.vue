@@ -37,17 +37,23 @@
           </q-btn>
 
           <q-dialog v-model="alert">
-            <q-card style="display: flex;justify-content: center; flex-direction: column;
-            padding: 5rem 0;border-radius: 2rem; max-height: 700px; width: 100%; ">
-              <q-icon name="close" v-close-popup style="right: 0;top: 0; "/>
-              <q-card-section>
-                <h4 class="word">Sign Up</h4>
-              </q-card-section>
-              <div class="img" style="display: flex; justify-content: center;">
-                <q-img alt="SignUp" src="Sign Up.png" style="height: 50%; width:50%;"/>
+            <q-card style="padding: 2rem 0 5rem 0;border-radius: 2rem; max-height: 700px; width: 100%; display: flex;flex-direction: column">
+              <q-icon v-close-popup
+                      style="padding: 0.5rem;  align-self: flex-end;"
+                      size="3.5rem">
+                <span class="material-icons">close</span>
+              </q-icon>
+
+              <div class="img" style="display: flex; justify-content: center; align-items: center;">
+                <q-img alt="SignUp" src="Sign Up.png" style="height: 45%; width:45%;"/>
               </div>
-              <q-card-section class="q-pt-none" style="text-align: center; font-family: Montserrat-Regular; font-size: 1.3rem;">
-                We have updating our filtering <br> system (Female\Male) and you can  <br> now instanly find people according  <br> to
+              <q-card-section>
+                <h4 class="word">Update</h4>
+              </q-card-section>
+              <q-card-section class="q-pt-none"
+                              style="text-align: center; font-family: Montserrat-Regular; font-size: 1.3rem;">
+                We have updating our filtering <br> system (Female\Male) and you can <br> now instanly find people
+                according <br> to
                 your settings.
               </q-card-section>
 
@@ -178,8 +184,8 @@ h2 {
 }
 
 h4 {
-  font-family: Montserrat-Regular;
-  font-weight: 700;
+  font-family: Montserrat-ExtraBold;
+  font-weight: bold;
   color: $red;
 }
 
@@ -327,7 +333,8 @@ h4 {
   border-radius: 2rem;
   background-color: #ffffff;
 }
-.word{
+
+.word {
   text-align: center;
   font-weight: bold;
   color: $red;
