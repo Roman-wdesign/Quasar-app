@@ -11,9 +11,65 @@
     <div class="content">
       <h2>MelodyCam</h2>
       <div class="set">
+        <a href="#" class="settings"  @click="settings=true"></a>
         <a href="#" class="user"></a>
-        <a href="#" class="settings"></a>
       </div>
+      <q-dialog v-model="settings" >
+        <q-card class="settings-card">
+          <q-card-section style="padding: 0">
+            <h4 class="word">Settings</h4>
+            <div class="q-pa-md" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+              <q-btn-dropdown style="box-shadow: unset; opacity: 50%; text-transform: none;" label="Select Country"  >
+                <q-list>
+                  <q-item clickable v-close-popup @click="onItemClick">
+                    <q-item-section>
+                      <q-item-label>Russia</q-item-label>
+                    </q-item-section>
+                  </q-item>
+                  <q-item clickable v-close-popup @click="onItemClick">
+                    <q-item-section>
+                      <q-item-label>Canada</q-item-label>
+                    </q-item-section>
+                  </q-item>
+                </q-list>
+              </q-btn-dropdown>
+              <q-btn-dropdown style="box-shadow: unset; opacity: 50%; text-transform: none;" label="Select  Language"  >
+                <q-list>
+                  <q-item clickable v-close-popup @click="onItemClick">
+                    <q-item-section>
+                      <q-item-label>English</q-item-label>
+                    </q-item-section>
+                  </q-item>
+                  <q-item clickable v-close-popup @click="onItemClick">
+                    <q-item-section>
+                      <q-item-label>French</q-item-label>
+                    </q-item-section>
+                  </q-item>
+                  <q-item clickable v-close-popup @click="onItemClick">
+                    <q-item-section>
+                      <q-item-label>Russian</q-item-label>
+                    </q-item-section>
+                  </q-item>
+                </q-list>
+              </q-btn-dropdown>
+              <q-btn-dropdown style="box-shadow: unset; opacity: 50%; text-transform: none;" label="Enable Dark Theme"  >
+                <q-list>
+                  <q-item clickable v-close-popup @click="onItemClick">
+                    <q-item-section>
+                      <q-item-label>Russia</q-item-label>
+                    </q-item-section>
+                  </q-item>
+                  <q-item clickable v-close-popup @click="onItemClick">
+                    <q-item-section>
+                      <q-item-label>Canada</q-item-label>
+                    </q-item-section>
+                  </q-item>
+                </q-list>
+              </q-btn-dropdown>
+            </div>
+          </q-card-section>
+        </q-card>
+      </q-dialog>
     </div>
 
 
@@ -126,6 +182,10 @@ export default {
   data() {
     return {
       alert: false,
+      settings: false,
+      onItemClick () {
+        // console.log('Clicked on an Item')
+      }
     }
   },
   name: "Desktop",
@@ -134,6 +194,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.settings-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  box-shadow: none;right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image: url($imgPath  + "Union-settings.png");
+}
 
 
 .area {
@@ -194,7 +269,7 @@ h4 {
   flex-direction: row;
 }
 
-.user {
+.settings {
   margin-right: 0.5rem;
   width: 42px;
   height: 42px;
@@ -208,7 +283,7 @@ h4 {
   }
 }
 
-.settings {
+.user {
   margin-left: 0.5rem;
   width: 42px;
   height: 42px;
