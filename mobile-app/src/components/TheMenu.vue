@@ -34,6 +34,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.q-pa-md{
+  @media (max-width: 414px){
+    display: none;
+  }
+}
+
 .button{
   color: #ffffff;
   background-color: $menu;

@@ -1,16 +1,8 @@
 <template>
   <div class="main">
     <div class="imgMain">
-      <q-img alt="Main" src="Union.png" style="height: 35%; width:35%; float: left; position: relative;
-         bottom: 340px;
-         margin-right: -250px;
-          left:0;
-         z-index: 1"/>
-      <q-img alt="Main" src="Team.png"
-             style="right: 50px;height: 35%; width: 35%;
-             position: relative;
-             float: right;
-             z-index: 1"/>
+      <q-img class="img-3" alt="Main" src="Union.png"/>
+      <q-img class="img-4" alt="Main" src="Team.png"/>
     </div>
 
     <div class="content">
@@ -39,6 +31,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
+.img-4{
+  right: 50px;height: 35%; width: 35%;
+  position: relative;
+  float: right;
+  z-index: 1;
+  @media (max-width: 414px){
+    right: 0;
+
+  }
+}
+
+.img-3{
+
+  height: 35%; width:35%; float: left; position: relative;
+  bottom: 340px;
+  margin-right: -250px;
+  left:0;
+  z-index: 1;
+  @media (max-width: 414px){
+    margin-right: 0;
+    left: 0;
+  }
+}
 
 
 p {

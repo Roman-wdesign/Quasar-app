@@ -26,3 +26,13 @@ $warning   : #F2C037;
 $red       : #FF1A1A;
 $menu      : #e83232;
 $imgPath   : '/icons/';
+
+$mobile    : 414px;
+
+.imgMain{
+  @media (max-width: 414px) {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+  }
+}
