@@ -1,11 +1,11 @@
 <template>
   <div class="main">
-    <div class="imgDesktop">
-      <q-img alt="Ellipse19" src="/icons/Ellipse-19.png" style="height: 25%;
-      width:25%;float: left;   margin-right: -200px; position: relative;z-index: -1;"/>
+    <div class="imgDesktop" style="align-items: center; margin:0 auto; padding: 0 10px;">
+      <q-img alt="Ellipse19" src="/icons/Ellipse-19.png" style="height: 20%;
+      width:20%;float: left; top: -50px;   position: relative;z-index: -1;"/>
 
-      <q-img alt="Ellipse18" src="/icons/Ellipse-18.png" style="height: 25%;
-      width:25%;float: right; margin-left: -200px;    position: relative;z-index: -1;"/>
+      <q-img alt="Ellipse18" src="/icons/Ellipse-18.png" style="height: 10%;
+      width:10%;float: right; top:25px; position: relative;z-index: -1;"/>
     </div>
 
     <div class="content">
@@ -15,8 +15,12 @@
         <a href="#" class="user"></a>
       </div>
       <q-dialog v-model="settings">
-        <q-card class="settings-card">
-          <q-card-section style="padding: 0">
+        <q-card class="settings-card" style="right: -520px;top: -160px;">
+          <q-card-section style="padding-right: 150px">
+            <div class="set-2">
+              <a href="#" class="settings" @click="settings=false"></a>
+              <a href="#" class="user"></a>
+            </div>
             <h4 class="word">Settings</h4>
             <div class="q-pa-md"
                  style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
@@ -41,7 +45,8 @@
                   </q-item>
                 </q-list>
               </q-btn-dropdown>
-              <q-btn-dropdown flat style="box-shadow: unset;  text-transform: none; color: #1D1D1D;opacity: 50%;" label="Select  Language">
+              <q-btn-dropdown flat style="box-shadow: unset;  text-transform: none; color: #1D1D1D;opacity: 50%;"
+                              label="Select  Language">
                 <q-list>
                   <q-item clickable v-close-popup @click="onItemClick">
                     <q-item-section>
@@ -60,7 +65,7 @@
                   </q-item>
                 </q-list>
               </q-btn-dropdown>
-              <div class="toggle"  style="box-shadow: unset;  text-transform: none;">
+              <div class="toggle" style="box-shadow: unset;  text-transform: none;">
                 <q-toggle
                   style="color: #1D1D1D; opacity: 50%;"
                   keep-color
@@ -68,14 +73,12 @@
                   color="pink"
                   @input="$q.dark.toggle"
                   false-value="Enable Dark Theme"
-                  true-value = "Disable Dark Theme"
+                  true-value="Disable Dark Theme"
                   v-model="EnableDarkTheme"
                 />
               </div>
-
               <a href="#" style="text-decoration: none; color: black;  opacity: 50%; text-transform: none;">Help</a>
             </div>
-
           </q-card-section>
         </q-card>
       </q-dialog>
@@ -161,7 +164,7 @@
             />
           </div>
           <div class="area">
-            <div class="area-input" >
+            <div class="area-input">
               <q-input
                 :input-style="{ color: '#000000' }"
                 clearable
@@ -210,6 +213,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .body--dark {
   background: $dark-page;
 }
@@ -292,9 +296,21 @@ h4 {
 .set {
   display: flex;
   flex-direction: row;
+  margin-right: -120px;
+}
+
+.set-2 {
+
+  display: flex;
+  float: right;
+  right: -200px;
+  margin-bottom: 170px;
+  position: relative;
 }
 
 .settings {
+  display: flex;
+  flex-direction: column;
   margin-right: 0.5rem;
   width: 42px;
   height: 42px;
