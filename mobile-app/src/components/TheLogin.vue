@@ -6,14 +6,17 @@
           <q-img alt="SignUp" src="Sign Up.png" style="height: 50%; width:50%;"/>
         </div>
         <h4 class="word">Sign Up</h4>
-        <q-input outlined label="E-mail" type="email" style="width: 30rem"/>
-        <q-input outlined type="text" label="Name" style="width: 30rem"/>
-        <q-input outlined type="password" label="Password" style="width: 30rem"/>
+        <q-input :input-style="{ color: '#000000' }" label-color="grey-10"  outlined label="E-mail" type="email" style="width: 30rem;  border: 1px solid rgba(0, 0, 0, 0.24);"
+        />
+        <q-input :input-style="{ color: '#000000' }" label-color="grey-10"  outlined type="text" label="Name" style="width: 30rem;  border: 1px solid rgba(0, 0, 0, 0.24);"
+        />
+        <q-input :input-style="{ color: '#000000' }" label-color="grey-10"  outlined type="password" label="Password" style="width: 30rem;  border: 1px solid rgba(0, 0, 0, 0.24);"
+        />
       </q-form>
     </div>
     <div class="q-pa-md">
       <div class="q-gutter-sm">
-        <q-checkbox v-model="val" label="Remember my data"/>
+        <q-checkbox class="check-1" color="blue" v-model="val" label="Remember my data"/>
       </div>
 
       <div class="q-px-sm">

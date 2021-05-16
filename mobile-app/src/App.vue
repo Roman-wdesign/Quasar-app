@@ -13,6 +13,9 @@ export default {
 </script>
 <style lang="scss">
 .body--dark {
+  .check-1{
+    color: black;
+  }
   background-color: $dark-page;
 }
 body{

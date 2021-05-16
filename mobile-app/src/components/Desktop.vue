@@ -143,7 +143,7 @@
       <div class="chat  .shadow-6">
         <h4 style="text-align: center;margin-top: 5px;">Chat</h4>
         <div class="q row justify-center">
-          <div style="width: 100%; width: 400px">
+          <div style="width: 400px">
             <q-chat-message
               style="  padding: 0.5rem;color: #1D1D1D"
               name="me"
@@ -163,7 +163,6 @@
           <div class="area">
             <div class="area-input" >
               <q-input
-                dark="true"
                 :input-style="{ color: '#000000' }"
                 clearable
                 placeholder="Write to your new friend"
@@ -194,6 +193,7 @@ export default {
   components: {ButtonMain},
   data() {
     return {
+
       alert: false,
       settings: false,
       EnableDarkTheme: 'Enable Dark Theme',
@@ -389,7 +389,7 @@ h4 {
 }
 
 .poly {
-  margin: auto;
+
   margin: 0 0.5rem 0 0;
   width: 25px;
   height: 25px;
