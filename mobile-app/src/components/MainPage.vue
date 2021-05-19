@@ -31,29 +31,57 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+//.imgMain{
+//  @media (max-width: 414px){
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: center;
+//    align-items: center;
+//  }
+//}
 
 
 .img-4{
-  right: 50px;height: 35%; width: 35%;
+  right: 50px;
+  height: 35%;
+  width: 35%;
   position: relative;
   float: right;
   z-index: 1;
   @media (max-width: 414px){
-    right: 0;
+    bottom: -550px;
+    right: -170px;
+    height: 65%;
+    width: 65%;
+    position: relative;
+    float: right;
+    z-index: -1;
 
   }
 }
 
 .img-3{
 
-  height: 35%; width:35%; float: left; position: relative;
+  height: 35%;
+  width:35%;
+  float: left;
+  position: relative;
   bottom: 340px;
-  margin-right: -250px;
+  margin-right: -180px;
   left:0;
   z-index: 1;
+
+
   @media (max-width: 414px){
-    margin-right: 0;
-    left: 0;
+    height: 65%; width: 65%;
+    bottom: 0;
+    float: left; position: relative;
+    top: -15px;
+    left: -130px;
+    transform: rotate(17deg);
+    margin-bottom: -250px;
+    z-index: -1;
+
   }
 }
 
@@ -65,21 +93,41 @@ p {
 }
 
 .content {
-  margin: 50px 0;
+
+  margin-top:  -120px;
   z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+  @media (max-width: 414px){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: -300px;
+  }
 
 }
 
 h2 {
+
+  font:{
+    size: 4.5rem;
+    family: Montserrat-ExtraBold;
+    weight: bold;
+  }
+
   z-index: 2;
-  font-family: Montserrat-ExtraBold;
-  font-weight: bold;
   color: $red;
   margin: 5rem 0 0 0;
+  @media (max-width: 414px){
+    font:{
+      size: 3rem;
+      family: Montserrat-ExtraBold;
+      weight: bold;
+    }
+  }
 }
 
 </style>
