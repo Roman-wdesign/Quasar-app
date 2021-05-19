@@ -91,14 +91,14 @@ p {
 }
 
 .content {
-
-  margin-top:  -120px;
   z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+
   @media (max-width: 414px){
+    margin-top:  -120px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
