@@ -7,7 +7,7 @@
 
     <div class="content">
       <h2>MelodyCam</h2>
-      <h4 style="z-index: 3">
+      <h4>
         Find new friends by video chatting with <br> people from all over the world!
       </h4>
       <h6 style="opacity: 50%; margin: 1rem 0; z-index: 2;">
@@ -31,14 +31,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-//.imgMain{
-//  @media (max-width: 414px){
-//    display: flex;
-//    flex-direction: column;
-//    justify-content: center;
-//    align-items: center;
-//  }
-//}
+h4{
+  z-index: 3;
+  @media (max-width: 414px){
+    margin: 1rem 0;
+  }
+}
 
 
 .img-4{
@@ -49,7 +47,7 @@ export default {
   float: right;
   z-index: 1;
   @media (max-width: 414px){
-    bottom: -550px;
+    bottom: -700px;
     right: -170px;
     height: 65%;
     width: 65%;
