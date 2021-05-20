@@ -90,8 +90,8 @@
 
     <div class="chose">
       <div class="gender">
-        <q-tabs no-shadow v-model="tab" indicator-color="transparent">
-          <q-tab  :ripple="false" class="tabs" no-shadow name="female" :selected="true"  label="Female"/>
+        <q-tabs class="shadow-0" v-model="tab"  indicator-color="transparent" >
+          <q-tab  :ripple="false" class="tabs" no-shadow name="female" label="Female"/>
           <q-tab  :ripple="false" class="tabs" no-shadow name="male" label="Male"/>
           <q-tab  :ripple="false" class="tabs" no-shadow name="couple" label="Couple"/>
         </q-tabs>
@@ -350,27 +350,24 @@ h4 {
 }
 
 .chose {
+  padding: 10px 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
 .tabs {
+
   box-shadow: none;
   font-family: Montserrat-Regular;
   font-weight: normal;
-
-  &:active {
-    box-shadow: none;
-    background-position: center;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-image: url($imgPath  + "tab-hover.png");
-    border: none;
-
-  }
-
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image: url($imgPath  + "tab-hover.png") ;
 }
+
+
 
 .chatting {
   display: flex;
