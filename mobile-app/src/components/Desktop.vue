@@ -87,10 +87,10 @@
 
     <div class="chose">
       <div class="gender">
-        <q-tabs no-shadow active-bg-color="">
-          <q-tab class="tabs" no-shadow name="female" label="Female"/>
-          <q-tab class="tabs" no-shadow name="male" label="Male"/>
-          <q-tab class="tabs" no-shadow name="couple" label="Couple"/>
+        <q-tabs no-shadow v-model="tab" indicator-color="transparent">
+          <q-tab  :ripple="false" class="tabs" no-shadow name="female" :selected="true" label="Female"/>
+          <q-tab  :ripple="false" class="tabs" no-shadow name="male" label="Male"/>
+          <q-tab  :ripple="false" class="tabs" no-shadow name="couple" label="Couple"/>
         </q-tabs>
       </div>
     </div>
@@ -196,7 +196,7 @@ export default {
   components: {ButtonMain},
   data() {
     return {
-
+      tab: "",
       alert: false,
       settings: false,
       EnableDarkTheme: 'Enable Dark Theme',
@@ -206,7 +206,9 @@ export default {
       }
     }
   },
-  computed: {},
+  methods: {
+
+  },
   name: "Desktop",
 
 }
@@ -249,7 +251,6 @@ export default {
   position: absolute;
   z-index: 5;
   bottom: 0;
-  //height: 100%;
   width: 100%;
   background-color: #E1F0FC;
 }
@@ -349,7 +350,7 @@ h4 {
   font-family: Montserrat-Regular;
   font-weight: normal;
 
-  &:hover {
+  &:active {
     box-shadow: none;
     background-position: center;
     background-size: 100% auto;
@@ -362,10 +363,11 @@ h4 {
 }
 
 .chatting {
-  padding: 0.5rem 0 0 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+
 }
 
 .search {
