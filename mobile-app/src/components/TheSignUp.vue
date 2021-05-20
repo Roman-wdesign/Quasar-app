@@ -53,27 +53,11 @@ export default {
 }
 
 .container {
-  max-width: 40rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  margin: 0 auto;
+@include container-1;
   padding: 5rem 0;
-  border-radius: 50px;
-  background-color: #ffffff;
-  box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.2);
 
   @media (max-width: 414px){
-    height: 761px;
-    border-radius: 0;
-    box-shadow: none;
-    max-width: 30rem;
-    margin: 70px 0 30px 0;
-    padding: 0;
+   @include form-1;
   }
 }
 .word{

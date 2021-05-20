@@ -5,12 +5,12 @@
         <div class="img">
           <q-img alt="SignUp" src="Sign Up.png" style="height: 50%; width:50%;"/>
         </div>
-        <h4 class="word">Sign Up</h4>
-        <q-input :input-style="{ color: '#000000' }" label-color="grey-10"  outlined label="E-mail" type="email" style="width: 30rem;  border: 1px solid rgba(0, 0, 0, 0.24);"
+        <h4 class="word">Login</h4>
+        <q-input class="form" :input-style="{ color: '#000000' }" label-color="grey-10"  outlined label="E-mail" type="email" style="width: 30rem;  border: 1px solid rgba(0, 0, 0, 0.24);"
         />
-        <q-input :input-style="{ color: '#000000' }" label-color="grey-10"  outlined type="text" label="Name" style="width: 30rem;  border: 1px solid rgba(0, 0, 0, 0.24);"
+        <q-input class="form" :input-style="{ color: '#000000' }" label-color="grey-10"  outlined type="text" label="Name" style="width: 30rem;  border: 1px solid rgba(0, 0, 0, 0.24);"
         />
-        <q-input :input-style="{ color: '#000000' }" label-color="grey-10"  outlined type="password" label="Password" style="width: 30rem;  border: 1px solid rgba(0, 0, 0, 0.24);"
+        <q-input class="form" :input-style="{ color: '#000000' }" label-color="grey-10"  outlined type="password" label="Password" style="width: 30rem;  border: 1px solid rgba(0, 0, 0, 0.24);"
         />
       </q-form>
     </div>
@@ -51,19 +51,17 @@ export default {
 
 
 .container {
-  max-width: 40rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  margin: 0 auto;
+@include container-1;
   padding: 2rem 0;
-  border-radius: 50px;
-  background-color: #ffffff;
-  box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 2px 8px 8px 0px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 414px){
+    @include form-1;
+  }
+}
+.form{
+  @media (max-width: 414px){
+    max-width: 20rem;
+  }
 }
 .word{
   font-weight: bold;
