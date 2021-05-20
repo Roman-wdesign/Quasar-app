@@ -228,24 +228,21 @@ export default {
 }
 
 .main{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include flex-1;
+  @media (max-width: 414px){
 
+   max-width: 40rem;
+  }
 }
 
 .settings-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include flex-1;
   align-items: center;
   background-color: inherit;
   box-shadow: none;
   right: 0;
 
-  background-position: center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  @include card-img;
   background-image: url($imgPath  + "Union-settings.png");
 }
 
@@ -253,7 +250,6 @@ export default {
 .area {
   padding: 0 1rem;
   display: flex;
-
   justify-content: center;
   margin: 0;
   border-radius: 2rem;
@@ -267,17 +263,14 @@ export default {
 .area-icon {
   display: flex;
   flex-direction: row;
-
 }
 
 .area-input {
-
   width: 100%;
 }
 
 label {
   position: relative;
-
 }
 
 .content {
@@ -288,6 +281,9 @@ label {
   justify-content: space-between;
   align-items: baseline;
   z-index: 5;
+  @media (max-width: 414px){
+    max-width: 40rem;
+  }
 }
 
 h2 {
@@ -307,15 +303,11 @@ h4 {
 .set {
   display: flex;
   flex-direction: row;
-
 }
 
 .set-2 {
-
   display: flex;
   float: right;
-
-
   position: relative;
 }
 
@@ -325,9 +317,7 @@ h4 {
   margin-right: 0.5rem;
   width: 42px;
   height: 42px;
-  background-position: center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  @include card-img;
   background-image: url($imgPath  + "settings.png");
 
   &:hover {
@@ -339,9 +329,7 @@ h4 {
   margin-left: 0.5rem;
   width: 42px;
   height: 42px;
-  background-position: center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  @include card-img;
   background-image: url($imgPath  + "user.png");
 
   &:hover {
@@ -357,17 +345,12 @@ h4 {
 }
 
 .tabs {
-
   box-shadow: none;
   font-family: Montserrat-Regular;
   font-weight: normal;
-  background-position: center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  @include card-img;
   background-image: url($imgPath  + "tab-hover.png") ;
 }
-
-
 
 .chatting {
   display: flex;
@@ -375,35 +358,25 @@ h4 {
   justify-content: center;
   margin: 0 auto;
   padding: 0;
-
+  @media (max-width: 414px){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .search {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-
-  width: 611px;
-  height: 280px;
-  background-color: #C4C4C4;
+@include search;
   margin: 0 0.5rem 0 0;
-  border: solid #ffffff 2px;
+
 }
 
 .search2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-
-  width: 611px;
-  height: 280px;
-  background-color: #C4C4C4;
+  @include search;
   margin: 0.5rem 0 0 0;
-  border: solid #ffffff 2px;
+  @media (max-width: 414px){
+    margin: 2rem 0;
+  }
 }
 
 .searching {
@@ -415,13 +388,10 @@ h4 {
 }
 
 .poly {
-
   margin: 0 0.5rem 0 0;
   width: 25px;
   height: 25px;
-  background-position: center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  @include card-img;
   background-image: url($imgPath  + "Polygon 1.png");
 }
 
@@ -429,24 +399,19 @@ h4 {
   margin: 0 0 0.5rem 0;
   width: 50px;
   height: 50px;
-  background-position: center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  @include card-img;
   background-image: url($imgPath  + "Microphone.png");
 
   &:hover {
     opacity: 50%;
   }
-
 }
 
 .cam {
   margin: 0.5rem 0 0 0;
   width: 50px;
   height: 50px;
-  background-position: center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  @include card-img;
   background-image: url($imgPath  + "Camera.png");
 
   &:hover {
@@ -466,5 +431,4 @@ h4 {
   color: $red;
   margin: 0;
 }
-
 </style>
