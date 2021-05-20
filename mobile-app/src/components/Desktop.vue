@@ -1,11 +1,14 @@
 <template>
   <div class="main">
-    <div class="imgDesktop" style="align-items: center; margin:0 auto; padding: 0 10px;">
+    <div class="imgDesktop"
+    style="display: flex;flex-direction: row;
+    justify-content: space-between;align-items: center; margin: -120px 0 0 0; padding: 0 10px;"
+    >
       <q-img alt="Ellipse19" src="/icons/Ellipse-19.png" style="height: 20%;
-      width:20%;float: left; top: -50px;   position: relative;z-index: -1;"/>
+      width:20%;float: left;  position: relative;z-index: -1;"/>
 
       <q-img alt="Ellipse18" src="/icons/Ellipse-18.png" style="height: 10%;
-      width:10%;float: right; top:25px; position: relative;z-index: -1;"/>
+      width:10%;float: right; position: relative;z-index: -1;"/>
     </div>
 
     <div class="content">
@@ -15,8 +18,8 @@
         <a href="#" class="user"></a>
       </div>
       <q-dialog v-model="settings">
-        <q-card class="settings-card" style="right: -520px;top: -160px;">
-          <q-card-section style="padding-right: 150px">
+        <q-card class="settings-card" >
+          <q-card-section>
             <div class="set-2">
               <a href="#" class="settings" @click="settings=false"></a>
               <a href="#" class="user"></a>
@@ -88,7 +91,7 @@
     <div class="chose">
       <div class="gender">
         <q-tabs no-shadow v-model="tab" indicator-color="transparent">
-          <q-tab  :ripple="false" class="tabs" no-shadow name="female" :selected="true" label="Female"/>
+          <q-tab  :ripple="false" class="tabs" no-shadow name="female" :selected="true"  label="Female"/>
           <q-tab  :ripple="false" class="tabs" no-shadow name="male" label="Male"/>
           <q-tab  :ripple="false" class="tabs" no-shadow name="couple" label="Couple"/>
         </q-tabs>
@@ -224,6 +227,13 @@ export default {
   background: #ffffff;
 }
 
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
 .settings-card {
   display: flex;
   flex-direction: column;
@@ -232,8 +242,7 @@ export default {
   background-color: inherit;
   box-shadow: none;
   right: 0;
-  width: 100vw;
-  height: 100vh;
+
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -272,7 +281,8 @@ label {
 }
 
 .content {
-  margin-top: -110px;
+  padding: 0 40px 0 5px;
+  margin-top: -210px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -281,7 +291,7 @@ label {
 }
 
 h2 {
-
+  padding-left: 150px;
   z-index: 5;
   font-family: 'Montserrat-ExtraBold';
   font-weight: bold;
@@ -297,15 +307,15 @@ h4 {
 .set {
   display: flex;
   flex-direction: row;
-  margin-right: -120px;
+
 }
 
 .set-2 {
 
   display: flex;
   float: right;
-  right: -200px;
-  margin-bottom: 170px;
+
+
   position: relative;
 }
 
@@ -366,7 +376,8 @@ h4 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-
+  margin: 0 auto;
+  padding: 0;
 
 }
 
