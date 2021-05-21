@@ -1,14 +1,8 @@
 <template>
   <div class="main">
-    <div class="imgDesktop"
-    style="display: flex;flex-direction: row;
-    justify-content: space-between;align-items: center; margin: -120px 0 0 0; padding: 0 10px;"
-    >
-      <q-img alt="Ellipse19" src="/icons/Ellipse-19.png" style="height: 20%;
-      width:20%;float: left;  position: relative;z-index: -1;"/>
-
-      <q-img alt="Ellipse18" src="/icons/Ellipse-18.png" style="height: 10%;
-      width:10%;float: right; position: relative;z-index: -1;"/>
+    <div class="imgDesktop">
+      <q-img alt="Ellipse19" class="Ellipse19" src="/icons/Ellipse-19.png"/>
+      <q-img alt="Ellipse18" class="Ellipse18" src="/icons/Ellipse-18.png"/>
     </div>
 
     <div class="content">
@@ -18,7 +12,7 @@
         <a href="#" class="user"></a>
       </div>
       <q-dialog v-model="settings">
-        <q-card class="settings-card" >
+        <q-card class="settings-card">
           <q-card-section>
             <div class="set-2">
               <a href="#" class="settings" @click="settings=false"></a>
@@ -90,10 +84,10 @@
 
     <div class="chose">
       <div class="gender">
-        <q-tabs class="shadow-0" v-model="tab"  indicator-color="transparent" >
-          <q-tab  :ripple="false" class="tabs" no-shadow name="female" label="Female"/>
-          <q-tab  :ripple="false" class="tabs" no-shadow name="male" label="Male"/>
-          <q-tab  :ripple="false" class="tabs" no-shadow name="couple" label="Couple"/>
+        <q-tabs class="shadow-0" v-model="tab" indicator-color="transparent">
+          <q-tab :ripple="false" class="tabs" no-shadow name="female" label="Female"/>
+          <q-tab :ripple="false" class="tabs" no-shadow name="male" label="Male"/>
+          <q-tab :ripple="false" class="tabs" no-shadow name="couple" label="Couple"/>
         </q-tabs>
       </div>
     </div>
@@ -136,10 +130,8 @@
                   </template>
                 </button-main>
               </q-card-actions>
-
             </q-card>
           </q-dialog>
-
         </div>
         <div class="search2">
           <a href="#" class="mic"></a>
@@ -150,20 +142,20 @@
         <h4 style="text-align: center;margin-top: 5px;">Chat</h4>
         <div class="q row justify-center">
           <div style="width: 400px">
-            <q-chat-message
-              style="  padding: 0.5rem;color: #1D1D1D"
-              name="me"
-              avatar="https://cdn.quasar.dev/img/avatar1.jpg"
-              :text="['hey, how are you?']"
-              sent
-              bg-color="cyan-3"
+            <q-chat-message class="message"
+                            style="padding: 0.5rem;color: #1D1D1D"
+                            name="me"
+                            avatar="https://cdn.quasar.dev/img/avatar1.jpg"
+                            :text="['hey, how are you?']"
+                            sent
+                            bg-color="cyan-3"
             />
-            <q-chat-message
-              style="  padding: 0.5rem;color: #1D1D1D"
-              name="Jane"
-              avatar="https://cdn.quasar.dev/img/avatar2.jpg"
-              :text="['doing fine, how r you?']"
-              bg-color="light-blue-13"
+            <q-chat-message class="message"
+                            style="  padding: 0.5rem;color: #1D1D1D"
+                            name="Jane"
+                            avatar="https://cdn.quasar.dev/img/avatar2.jpg"
+                            :text="['doing fine, how r you?']"
+                            bg-color="light-blue-13"
             />
           </div>
           <div class="area">
@@ -209,9 +201,7 @@ export default {
       }
     }
   },
-  methods: {
-
-  },
+  methods: {},
   name: "Desktop",
 
 }
@@ -227,11 +217,54 @@ export default {
   background: #ffffff;
 }
 
-.main{
-  @include flex-1;
-  @media (max-width: 414px){
+.imgDesktop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: -120px 0 0 0;
+  padding: 0 10px;
 
-   max-width: 40rem;
+  @media (max-width: 414px) {
+    margin: -90px 0 0 0;
+    padding: 0 10px;
+  }
+}
+
+.Ellipse19 {
+  height: 20%;
+  width: 20%;
+  float: left;
+  position: relative;
+  z-index: -1;
+  @media (max-width: 414px) {
+    height: 50%;
+    width: 50%;
+  }
+}
+
+.Ellipse18 {
+  height: 10%;
+  width: 10%;
+  float: right;
+  position: relative;
+  z-index: -1;
+  @media (max-width: 414px) {
+    height: 40%;
+    width: 40%;
+  }
+}
+
+.message {
+  @media (max-width: 414px) {
+    display: none;
+  }
+}
+
+.main {
+  @include flex-1;
+  @media (max-width: 414px) {
+    max-width: 40rem;
   }
 }
 
@@ -281,17 +314,28 @@ label {
   justify-content: space-between;
   align-items: baseline;
   z-index: 5;
-  @media (max-width: 414px){
+  @media (max-width: 414px) {
     max-width: 40rem;
+    margin-top: 0;
   }
 }
 
 h2 {
   padding-left: 150px;
   z-index: 5;
-  font-family: 'Montserrat-ExtraBold';
-  font-weight: bold;
+  font: {
+    size: 4rem;
+    family: 'Montserrat-ExtraBold';
+    weight: bold;
+  }
+
   color: $red;
+  @media (max-width: 414px) {
+    padding: 0;
+    font: {
+      size: 2rem;
+    }
+  }
 }
 
 h4 {
@@ -323,6 +367,11 @@ h4 {
   &:hover {
     opacity: 50%;
   }
+
+  @media (max-width: 414px) {
+    width: 23px;
+    height: 23px;
+  }
 }
 
 .user {
@@ -335,6 +384,11 @@ h4 {
   &:hover {
     opacity: 50%;
   }
+
+  @media (max-width: 414px) {
+    width: 23px;
+    height: 23px;
+  }
 }
 
 .chose {
@@ -346,10 +400,19 @@ h4 {
 
 .tabs {
   box-shadow: none;
-  font-family: Montserrat-Regular;
-  font-weight: normal;
+  font:{
+    size: 1rem;
+    family: 'Montserrat-Regular';
+    weight: normal;
+  }
+
   @include card-img;
-  background-image: url($imgPath  + "tab-hover.png") ;
+  background-image: url($imgPath  + "tab-hover.png");
+  @media (max-width: 414px){
+    font:{
+      size: 0.6rem;
+    }
+  }
 }
 
 .chatting {
@@ -358,7 +421,7 @@ h4 {
   justify-content: center;
   margin: 0 auto;
   padding: 0;
-  @media (max-width: 414px){
+  @media (max-width: 414px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -366,16 +429,22 @@ h4 {
 }
 
 .search {
-@include search;
+  @include search;
   margin: 0 0.5rem 0 0;
-
+  @media (max-width: 414px) {
+    max-width: 346px;
+    max-height: 280px;
+    margin: 0 auto;
+  }
 }
 
 .search2 {
   @include search;
   margin: 0.5rem 0 0 0;
-  @media (max-width: 414px){
-    margin: 2rem 0;
+  @media (max-width: 414px) {
+    max-width: 346px;
+    max-height: 280px;
+    margin: 1rem auto;
   }
 }
 
@@ -423,6 +492,11 @@ h4 {
   position: relative;
   border-radius: 2rem;
   background-color: #ffffff;
+  @media (max-width: 414px) {
+    width: 100%;
+    height: 10rem;
+    position: sticky;
+  }
 }
 
 .word {
