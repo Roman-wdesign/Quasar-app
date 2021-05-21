@@ -317,7 +317,7 @@ label {
   z-index: 5;
   @media (max-width: 414px) {
     max-width: 40rem;
-    margin-top: -100px;
+    margin-top: -90px;
     padding: 0 1rem;
   }
 }
