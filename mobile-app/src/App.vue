@@ -1,6 +1,6 @@
 <template>
   <div id="q-app">
-    <the-menu ></the-menu>
+    <the-menu style="@media (max-width: 414px){display: none}"></the-menu>
     <router-view />
   </div>
 </template>

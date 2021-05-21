@@ -227,7 +227,7 @@ export default {
 
   @media (max-width: 414px) {
     margin: -90px 0 0 0;
-    padding: 0 10px;
+    padding: 0;
   }
 }
 
@@ -244,8 +244,8 @@ export default {
 }
 
 .Ellipse18 {
-  height: 10%;
-  width: 10%;
+  height: 30%;
+  width: 30%;
   float: right;
   position: relative;
   z-index: -1;
@@ -265,6 +265,7 @@ export default {
   @include flex-1;
   @media (max-width: 414px) {
     max-width: 40rem;
+    overflow: hidden;
   }
 }
 
@@ -316,7 +317,8 @@ label {
   z-index: 5;
   @media (max-width: 414px) {
     max-width: 40rem;
-    margin-top: 0;
+    margin-top: -100px;
+    padding: 0 1rem;
   }
 }
 
@@ -333,7 +335,7 @@ h2 {
   @media (max-width: 414px) {
     padding: 0;
     font: {
-      size: 2rem;
+      size: 1.5rem;
     }
   }
 }
@@ -393,14 +395,12 @@ h4 {
 
 .chose {
   padding: 10px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+ @include flex-2;
 }
 
 .tabs {
   box-shadow: none;
-  font:{
+  font: {
     size: 1rem;
     family: 'Montserrat-Regular';
     weight: normal;
@@ -408,23 +408,19 @@ h4 {
 
   @include card-img;
   background-image: url($imgPath  + "tab-hover.png");
-  @media (max-width: 414px){
-    font:{
+  @media (max-width: 414px) {
+    font: {
       size: 0.6rem;
     }
   }
 }
 
 .chatting {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  @include flex-2;
   margin: 0 auto;
   padding: 0;
   @media (max-width: 414px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex-1;
   }
 }
 
@@ -493,9 +489,10 @@ h4 {
   border-radius: 2rem;
   background-color: #ffffff;
   @media (max-width: 414px) {
-    width: 100%;
+    width: 414px;
     height: 10rem;
     position: sticky;
+    border-radius: 2rem 2rem 0 0;
   }
 }
 
