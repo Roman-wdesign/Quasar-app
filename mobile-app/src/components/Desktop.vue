@@ -269,9 +269,11 @@ export default {
   background-color: inherit;
   box-shadow: none;
   right: 0;
-
+  width: 100vw;
+  height: 100vh;
   @include card-img;
   background-image: url($imgPath  + "Union-settings.png");
+  padding:  0 100px 0 0;
 }
 
 
@@ -344,12 +346,15 @@ h4 {
 .set {
   display: flex;
   flex-direction: row;
+  margin-right: -120px;
 }
 
 .set-2 {
   display: flex;
   float: right;
   position: relative;
+  right: -190px;
+  margin-bottom: 120px;
 }
 
 .settings {
