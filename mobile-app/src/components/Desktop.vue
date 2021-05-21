@@ -85,10 +85,10 @@
 
     <div class="chose">
       <div class="gender">
-        <q-tabs class="shadow-0" v-model="tab" indicator-color="transparent">
-          <q-tab :ripple="false" class="tabs" no-shadow name="female" label="Female"/>
-          <q-tab :ripple="false" class="tabs" no-shadow name="male" label="Male"/>
-          <q-tab :ripple="false" class="tabs" no-shadow name="couple" label="Couple"/>
+        <q-tabs class="shadow-0" v-model="tab" indicator-color="transparent" >
+          <q-tab :ripple="false"  v-bind:class="{tabs: !show}" @click="show = !show" no-shadow name="female" label="Female"/>
+          <q-tab :ripple="false"  v-bind:class="{tabs: show}" @click="show = !show" no-shadow name="male" label="Male"/>
+          <q-tab :ripple="false"  v-bind:class="{tabs: show}" @click="show = !show" no-shadow name="couple" label="Couple"/>
         </q-tabs>
       </div>
     </div>
@@ -192,6 +192,7 @@ export default {
   components: {ButtonMain},
   data() {
     return {
+      isActive: false,
       tab: "",
       alert: false,
       settings: false,
@@ -202,7 +203,9 @@ export default {
       }
     }
   },
-  methods: {},
+  methods: {
+
+  },
   name: "Desktop",
 
 }
@@ -219,9 +222,7 @@ export default {
 }
 
 .imgDesktop {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  @include flex-row-between;
   align-items: center;
   margin: -120px 0 0 0;
   padding: 0 10px;
@@ -334,9 +335,7 @@ label {
 .content {
   padding: 0 40px 0 5px;
   margin-top: -210px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  @include flex-row-between;
   align-items: baseline;
   z-index: 5;
   @media (max-width: 414px) {
@@ -418,11 +417,13 @@ h4 {
 }
 
 .tabs {
+  color: black;
   box-shadow: none;
   font: {
     size: 1rem;
     family: 'Montserrat-Regular';
     weight: normal;
+
   }
 
   @include card-img;
