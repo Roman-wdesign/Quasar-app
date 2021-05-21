@@ -244,8 +244,8 @@ export default {
 }
 
 .Ellipse18 {
-  height: 30%;
-  width: 30%;
+  height: 10%;
+  width: 10%;
   float: right;
   position: relative;
   z-index: -1;
@@ -493,7 +493,6 @@ h4 {
   @media (max-width: 414px) {
     width: 414px;
     height: 10rem;
-    position: sticky;
     border-radius: 2rem 2rem 0 0;
   }
 }
