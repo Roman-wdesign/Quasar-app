@@ -226,7 +226,7 @@ export default {
   padding: 0 10px;
 
   @media (max-width: 414px) {
-    margin: -90px 0 0 0;
+    margin: -70px 0 0 0;
     padding: 0;
   }
 }
@@ -335,6 +335,7 @@ h2 {
   color: $red;
   @media (max-width: 414px) {
     padding: 0;
+    margin: 0 0 20px 0;
     font: {
       size: 1.5rem;
     }
