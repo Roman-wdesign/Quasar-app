@@ -255,6 +255,13 @@ export default {
     right: -25px;
   }
 }
+
+.message {
+  @media (max-width: 414px) {
+
+  }
+}
+
 .main {
   @include flex-1;
   @media (max-width: 414px) {
@@ -271,9 +278,10 @@ export default {
   right: 0;
   width: 100vw;
   height: 100vh;
+  padding:  0 100px 0 0;
+
   @include card-img;
   background-image: url($imgPath  + "Union-settings.png");
-  padding:  0 100px 0 0;
 }
 
 
@@ -346,7 +354,6 @@ h4 {
 .set {
   display: flex;
   flex-direction: row;
-  margin-right: -120px;
 }
 
 .set-2 {
