@@ -11,6 +11,7 @@
         <a href="#" class="settings" @click="settings=true"></a>
         <a href="#" class="user"></a>
       </div>
+
       <q-dialog v-model="settings">
         <q-card class="settings-card">
           <q-card-section>
@@ -271,19 +272,38 @@ export default {
 }
 
 .settings-card {
+
   @include flex-1;
   align-items: center;
   background-color: inherit;
   box-shadow: none;
-  right: -520px;top: -160px;
+  right: -520px;
+  top: -160px;
   width: 100vw;
   height: 100vh;
-  padding:  0 100px 0 0;
-
+  padding: 0 100px 0 0;
   @include card-img;
   background-image: url($imgPath  + "Union-settings.png");
+
+  @media (max-width: 414px) {
+    padding: 0 100px 0 0;
+    right: -40px;
+    top: -320px;
+  }
 }
 
+.set-2 {
+  display: flex;
+  float: right;
+  position: relative;
+  right: -190px;
+  margin-bottom: 160px;
+
+  @media (max-width: 414px) {
+    right: -95px;
+    margin: 0 0 10px 0;
+  }
+}
 
 .area {
   padding: 0 1rem;
@@ -356,14 +376,6 @@ h4 {
   flex-direction: row;
 }
 
-.set-2 {
-  display: flex;
-  float: right;
-  position: relative;
-  right: -190px;
-  margin-bottom: 160px;
-}
-
 .settings {
   display: flex;
   flex-direction: column;
@@ -402,7 +414,7 @@ h4 {
 
 .chose {
   padding: 10px 0;
- @include flex-2;
+  @include flex-2;
 }
 
 .tabs {
@@ -508,15 +520,13 @@ h4 {
   color: $red;
   margin: 0;
 }
-.word-1{
+
+.word-1 {
   text-align: center;
-  font:{
-    size: 2rem;
+  font: {
     weight: bold;
   }
   color: $red;
   margin: 0;
-  padding: 0;
 }
-
 </style>
