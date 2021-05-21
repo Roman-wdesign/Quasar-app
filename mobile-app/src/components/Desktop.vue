@@ -255,13 +255,6 @@ export default {
     right: -25px;
   }
 }
-
-.message {
-  @media (max-width: 414px) {
-    display: none;
-  }
-}
-
 .main {
   @include flex-1;
   @media (max-width: 414px) {
@@ -492,7 +485,7 @@ h4 {
   background-color: #ffffff;
   @media (max-width: 414px) {
     width: 414px;
-    height: 10rem;
+    height: 30rem;
     border-radius: 2rem 2rem 0 0;
   }
 }
