@@ -275,7 +275,7 @@ export default {
   align-items: center;
   background-color: inherit;
   box-shadow: none;
-  right: 0;
+  right: -520px;top: -160px;
   width: 100vw;
   height: 100vh;
   padding:  0 100px 0 0;
