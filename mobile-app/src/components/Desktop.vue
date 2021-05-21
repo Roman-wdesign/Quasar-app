@@ -18,7 +18,7 @@
               <a href="#" class="settings" @click="settings=false"></a>
               <a href="#" class="user"></a>
             </div>
-            <h4 class="word">Settings</h4>
+            <h4 class="word-1">Settings</h4>
             <div class="q-pa-md"
                  style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
               <q-btn-dropdown
@@ -361,7 +361,7 @@ h4 {
   float: right;
   position: relative;
   right: -190px;
-  margin-bottom: 120px;
+  margin-bottom: 160px;
 }
 
 .settings {
@@ -508,4 +508,15 @@ h4 {
   color: $red;
   margin: 0;
 }
+.word-1{
+  text-align: center;
+  font:{
+    size: 2rem;
+    weight: bold;
+  }
+  color: $red;
+  margin: 0;
+  padding: 0;
+}
+
 </style>
